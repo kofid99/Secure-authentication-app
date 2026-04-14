@@ -93,7 +93,7 @@ Failed login attempt for user: admin
 
 These logs could be forwarded to a SIEM system for threat detection.
 
-Technologies Used
+Technologies Used:
 Python
 Flask
 bcrypt
@@ -109,7 +109,6 @@ Deploy to a cloud environment
 Learning Objectives
 
 This project was built to practice:
-
 Secure authentication design
 Defensive programming practices
 Brute-force attack mitigation
