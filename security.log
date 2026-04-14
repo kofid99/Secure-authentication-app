@@ -1,0 +1,62 @@
+2026-04-07 12:08:11,795 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-07 12:08:11,795 - [33mPress CTRL+C to quit[0m
+2026-04-07 12:08:11,808 -  * Restarting with watchdog (fsevents)
+2026-04-07 12:08:12,033 -  * Debugger is active!
+2026-04-07 12:08:12,042 -  * Debugger PIN: 107-086-456
+2026-04-07 12:13:24,947 -  * Debugger is active!
+2026-04-07 12:13:24,959 -  * Debugger PIN: 107-086-456
+2026-04-07 12:13:46,281 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-07 12:13:46,281 - [33mPress CTRL+C to quit[0m
+2026-04-07 12:13:46,289 -  * Restarting with watchdog (fsevents)
+2026-04-07 12:13:46,510 -  * Debugger is active!
+2026-04-07 12:13:46,519 -  * Debugger PIN: 107-086-456
+2026-04-07 12:14:30,964 - 127.0.0.1 - - [07/Apr/2026 12:14:30] "GET / HTTP/1.1" 200 -
+2026-04-07 12:14:58,202 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 12:14:58,589 - 127.0.0.1 - - [07/Apr/2026 12:14:58] "POST /login HTTP/1.1" 200 -
+2026-04-07 12:15:37,214 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 12:15:37,600 - 127.0.0.1 - - [07/Apr/2026 12:15:37] "POST /login HTTP/1.1" 200 -
+2026-04-07 16:17:34,801 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-07 16:17:34,802 - [33mPress CTRL+C to quit[0m
+2026-04-07 16:17:34,815 -  * Restarting with watchdog (fsevents)
+2026-04-07 16:17:35,052 -  * Debugger is active!
+2026-04-07 16:17:35,064 -  * Debugger PIN: 107-086-456
+2026-04-07 16:17:46,643 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 16:17:47,026 - 127.0.0.1 - - [07/Apr/2026 16:17:47] "POST /login HTTP/1.1" 200 -
+2026-04-07 16:17:47,921 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 16:17:48,306 - 127.0.0.1 - - [07/Apr/2026 16:17:48] "POST /login HTTP/1.1" 200 -
+2026-04-07 16:17:49,015 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 16:17:49,399 - 127.0.0.1 - - [07/Apr/2026 16:17:49] "POST /login HTTP/1.1" 200 -
+2026-04-07 16:17:50,204 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 16:17:50,586 - 127.0.0.1 - - [07/Apr/2026 16:17:50] "POST /login HTTP/1.1" 200 -
+2026-04-07 16:17:51,295 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 16:17:51,677 - 127.0.0.1 - - [07/Apr/2026 16:17:51] "POST /login HTTP/1.1" 200 -
+2026-04-07 16:17:52,395 - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+2026-04-07 16:17:52,396 - 127.0.0.1 - - [07/Apr/2026 16:17:52] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+2026-04-07 16:17:57,557 - 127.0.0.1 - - [07/Apr/2026 16:17:57] "GET / HTTP/1.1" 200 -
+2026-04-07 16:17:58,552 - 127.0.0.1 - - [07/Apr/2026 16:17:58] "GET / HTTP/1.1" 200 -
+2026-04-07 16:18:02,448 - 127.0.0.1 - - [07/Apr/2026 16:18:02] "GET / HTTP/1.1" 200 -
+2026-04-07 16:18:04,237 - 127.0.0.1 - - [07/Apr/2026 16:18:04] "GET / HTTP/1.1" 200 -
+2026-04-07 16:18:05,664 - 127.0.0.1 - - [07/Apr/2026 16:18:05] "GET / HTTP/1.1" 200 -
+2026-04-07 16:18:07,082 - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: home
+2026-04-07 16:18:07,089 - 127.0.0.1 - - [07/Apr/2026 16:18:07] "[31m[1mGET / HTTP/1.1[0m" 429 -
+2026-04-07 22:01:50,223 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-07 22:01:50,224 - [33mPress CTRL+C to quit[0m
+2026-04-07 22:01:50,244 -  * Restarting with watchdog (fsevents)
+2026-04-07 22:01:50,465 -  * Debugger is active!
+2026-04-07 22:01:50,477 -  * Debugger PIN: 107-086-456
+2026-04-07 22:01:53,216 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 22:01:53,599 - 127.0.0.1 - - [07/Apr/2026 22:01:53] "POST /login HTTP/1.1" 200 -
+2026-04-07 22:02:13,395 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 22:02:13,782 - 127.0.0.1 - - [07/Apr/2026 22:02:13] "POST /login HTTP/1.1" 200 -
+2026-04-07 22:02:14,422 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 22:02:14,805 - 127.0.0.1 - - [07/Apr/2026 22:02:14] "POST /login HTTP/1.1" 200 -
+2026-04-07 22:02:15,384 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 22:02:15,772 - 127.0.0.1 - - [07/Apr/2026 22:02:15] "POST /login HTTP/1.1" 200 -
+2026-04-07 22:02:16,341 - Login attempt from 127.0.0.1 with username testuser
+2026-04-07 22:02:16,730 - 127.0.0.1 - - [07/Apr/2026 22:02:16] "POST /login HTTP/1.1" 200 -
+2026-04-07 22:02:17,345 - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+2026-04-07 22:02:17,347 - 127.0.0.1 - - [07/Apr/2026 22:02:17] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
