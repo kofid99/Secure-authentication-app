@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 import jwt
-import datetime
-#import flask limiter
+# import flask limiter
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import logging
@@ -24,7 +23,7 @@ SECRET_KEY = "supersecretkey"
 def home():
     return "Secure Authentication App Running"
 
-#create-database 
+# create-database 
 import sqlite3
 
 def init_db():
@@ -44,7 +43,7 @@ def init_db():
 
 init_db() 
 
-#add bcrypt
+# add bcrypt
 import bcrypt
 from flask import request, jsonify
 
@@ -64,14 +63,14 @@ def register():
     try:
         cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, hashed))
         conn.commit()
-    except:
+    except Exception:
         return jsonify({"message": "User already exists"})
 
     conn.close()
 
     return jsonify({"message": "User registered successfully"})
 
-#login route
+# login route
 @app.route("/login", methods=["POST"])
 @limiter.limit("5 per minute")
 def login():
@@ -101,7 +100,7 @@ def login():
     
 
 
-#require authentication
+# require authentication
 @app.route("/profile", methods=["GET"])
 def profile():
 
