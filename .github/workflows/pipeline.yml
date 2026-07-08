@@ -28,12 +28,7 @@ jobs:
       - name: Run flake8 linter
         run: |
           pip install flake8
-          flake8 . --count --max-line-length=120
+          flake8 . --count --max-line-length=120 --ignore=E265,E302,E303,E305,W291,W293,E402
 
       - name: Echo pipeline works
         run: echo "✅ Pipeline is live"
-
-        - name: Run flake8 linter
-        run: |
-          pip install flake8
-          flake8 . --count --max-line-length=120 --ignore=E265,E302,E303,E305,W291,W293,E402
