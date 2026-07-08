@@ -45,7 +45,6 @@ init_db()
 
 # add bcrypt
 import bcrypt
-from flask import request, jsonify
 
 #registration route 
 @app.route("/register", methods=["POST"])
