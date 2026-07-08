@@ -32,3 +32,8 @@ jobs:
 
       - name: Echo pipeline works
         run: echo "✅ Pipeline is live"
+        
+      - name: Run Bandit SAST
+        run: |
+          pip install bandit
+          bandit -r . -ll --exclude ./.venv,./tests
