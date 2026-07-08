@@ -115,4 +115,4 @@ def profile():
     except jwt.ExpiredSignatureError:
         return jsonify({"message": "Token expired"}), 401
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
