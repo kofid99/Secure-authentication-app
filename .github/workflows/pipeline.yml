@@ -1,0 +1,34 @@
+name: Secure Auth API Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run flake8 linter
+        run: |
+          pip install flake8
+          flake8 . --count --max-line-length=120
+
+      - name: Echo pipeline works
+        run: echo "✅ Pipeline is live"
