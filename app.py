@@ -6,7 +6,7 @@ from flask_limiter.util import get_remote_address
 import logging
 
 logging.basicConfig(
-    filename="security.log",
+    filename="/app/logs/security.log",
     level=logging.INFO,
     format="%(asctime)s - %(message)s"
 )
@@ -115,4 +115,4 @@ def profile():
     except jwt.ExpiredSignatureError:
         return jsonify({"message": "Token expired"}), 401
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
