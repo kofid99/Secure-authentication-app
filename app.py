@@ -115,5 +115,5 @@ def profile():
     except jwt.ExpiredSignatureError:
         return jsonify({"message": "Token expired"}), 401
 if __name__ == "__main__":
-# nosec B104 - binding to 0.0.0.0 required for Docker container networking
+    # nosec B104 - binding to 0.0.0.0 required for Docker container networking
     app.run(host='0.0.0.0', port=5000, debug=False)   # nosec B104
