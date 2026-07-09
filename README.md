@@ -1,116 +1,52 @@
-Secure Authentication API
+# Secure Authentication API
 
-A secure authentication API built with Python and Flask that implements common security controls used in modern web applications.
+Flask JWT authentication API with an automated DevSecOps CI/CD pipeline — security gates block every commit that introduces vulnerabilities.
 
-This project demonstrates secure password storage, authentication, brute-force protection, and security logging, simulating how authentication systems are designed in production environments.
+![Pipeline](https://github.com/kofid99/Secure-authentication-app/actions/workflows/pipeline.yml/badge.svg)
 
-Features
-User registration system
-Secure password hashing using bcrypt
-Token-based authentication using JSON Web Token
-Brute-force attack protection with Flask-Limiter
-SQLite user database
-Login attempt monitoring and logging
-Account lockout after multiple failed login attempts
-Security Controls Implemented
-Control	Purpose
-Password Hashing	Protects stored passwords using bcrypt
-JWT Authentication	Secure session token generation
-Rate Limiting	Prevents brute-force login attacks
-Account Lockout	Locks user account after multiple failed attempts
-Logging	Enables monitoring of authentication activity
-Project Structure
-secure-auth-app
-│
-├── app.py
-├── users.db
-├── requirements.txt
-└── security.log
-Installation
+---
 
-Clone the repository:
+## What it does
 
-git clone https://github.com/yourusername/secure-auth-app.git
-cd secure-auth-app
+- Secure user registration and login with bcrypt password hashing and JWT tokens
+- Brute-force protection via rate limiting and account lockout after 5 failed attempts
+- Security logging on all authentication events
+- Fully containerized with Docker, non-root user, multi-stage build
 
-Install dependencies:
+---
 
-pip install -r requirements.txt
+## CI/CD Pipeline
 
-Run the application:
+| Stage | Tool | Fails On |
+|-------|------|----------|
+| Code Quality | flake8 | Unused imports, duplicate code |
+| SAST | Bandit | Medium+ severity findings |
+| Container Build | Docker | Build failure |
+| CVE Scan | Trivy | CRITICAL or HIGH vulnerabilities |
 
-python app.py
+## Security Findings Caught and Fixed
 
-The API will start on:
+| CVE / Finding | Severity | Fix |
+|---------------|----------|-----|
+| B201 — Flask debug=True (arbitrary code execution) | High | Disabled, controlled via env var |
+| CVE-2026-48526 — PyJWT auth bypass | High | Upgraded to 2.13.0 |
+| CVE-2026-32597 — PyJWT crit header violation | High | Upgraded to 2.13.0 |
 
-http://127.0.0.1:5000
-API Endpoints
-Register User
-POST /register
+---
 
-Example request:
+## How to Run
 
-{
-  "username": "testuser",
-  "password": "securepassword"
-}
+```bash
+git clone https://github.com/kofid99/Secure-authentication-app.git
+cd Secure-authentication-app
+docker build -t secure-auth-api:v1 .
+docker run -p 5001:5000 secure-auth-api:v1
+```
 
-Response:
+**POST /register** and **POST /login** available at `http://localhost:5001`
 
-User registered successfully
-Login
-POST /login
+---
 
-Example request:
+## Tech Stack
 
-{
-  "username": "testuser",
-  "password": "securepassword"
-}
-
-Response:
-
-{
-  "token": "JWT_TOKEN"
-}
-Example Attack Protection
-
-If a user attempts to log in multiple times with incorrect credentials:
-
-Requests are rate limited
-Failed attempts are tracked
-After 5 failed attempts, the account is locked
-
-This simulates real-world authentication protection against brute force attacks.
-
-Security Logging
-
-Authentication activity is logged for monitoring and detection purposes.
-
-Example log entry:
-
-Failed login attempt for user: admin
-
-These logs could be forwarded to a SIEM system for threat detection.
-
-Technologies Used:
-Python
-Flask
-bcrypt
-JSON Web Token
-Flask-Limiter
-SQLite
-Future Improvements
-Containerize the application using Docker
-Add role-based access control
-Implement refresh tokens
-Integrate with a SIEM for real-time alerting
-Deploy to a cloud environment
-Learning Objectives
-
-This project was built to practice:
-Secure authentication design
-Defensive programming practices
-Brute-force attack mitigation
-Security monitoring concepts
-Backend API development
+GitHub Actions · Docker · Python 3.11 · Flask · Bandit · Trivy · flake8 · PyJWT · bcrypt · Flask-Limiter
