@@ -5,8 +5,9 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
-
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir --upgrade jaraco.context==6.1.2 wheel==0.47.0 && \
+    pip install --no-cache-dir -r requirements.txt
 # Stage 2 — Runtime: lean final image
 FROM python:3.11-slim AS runtime
 

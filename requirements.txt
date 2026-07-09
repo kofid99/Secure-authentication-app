@@ -1,6 +1,6 @@
 Flask==3.1.0
 bcrypt==4.3.0
-PyJWT==2.10.1
+PyJWT==2.13.0
 Flask-Limiter==4.1.1
 jaraco.context==6.1.2
 wheel==0.47.0
