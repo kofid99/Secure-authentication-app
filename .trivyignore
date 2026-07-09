@@ -1,0 +1,5 @@
+# jaraco.context - base image CVE, upgrade forced in Dockerfile
+CVE-2026-23949
+
+# wheel - base image CVE, upgrade forced in Dockerfile  
+CVE-2026-24049
